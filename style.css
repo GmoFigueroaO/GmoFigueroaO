@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+}
+
+a:link{
+	color: yellow;
+}
+a:hover{
+	font-size: 1.1em;
+}
+
+#Fotoperfil{
+	width: 150px; 
+	height: 150px;
+	object-fit: cover;
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 50%;
+  }
+  
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 35px;
+}
+
+.contenedor .header {
+	width: 100%;
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+	display: flex;
+	height: 300px;
+	border-radius: 30px;
+
+} 
+
+.contenedor header ul #cv{
+	font-style:italic;
+	font-size:large;
+	padding-left: 20px;
+}
+
+.contenedor header ul #txtNombre{
+	font-size:x-large;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+
+.contenedor header ul #loguitoWapp{
+	width: 30px; 
+	height: 30px;
+}
+
+.contenedor header ul #loguitoWapp:hover{
+	transform:scale(1.5);
+	
+}
+
+.contenedor header ul #txtPerfil{
+	font-size:large;
+	padding-left: 20px;
+	padding-bottom: 15px;
+}
+
+.contenedor header ul #txtEMail{
+	color: #55a8fd;
+	font-size:medium;
+	padding-left: 20px;
+}
+.contenedor header ul #Movil{
+	color: #55a8fd;
+	font-size:medium;
+	padding-left: 20px;
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #fAA43D;
+	text-align: center;
+	text-align: justify;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+	border-radius: 10%;
+}
+
+.contenedor .sidebar .titSoftware{
+	color:#12203E
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 300px;
+	text-align:justify;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20%;
+}
+.contenedor .widget-2 {
+	background:crimson;
+	font-size:large;
+	font-weight: bold;
+	height: 350px;
+}
+
+.contenedor .widget-1 {
+	color: #000;
+	grid-area: widget-1;
+	height: 350px;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+.contenedor .footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+	border-radius: 50px;
+}
+
+.otroestilo { 
+	font-weight:bold ;
+	color:rgb(0, 4, 255);
+}
+.otroestilo2 { 
+	font-weight:bold ;  
+	color:#fAA43D ; 
+	font-size: small;
+	text-align:right;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-2"
+						 "footer footer footer";
+	}
+}
+
+input #BtnImprimir {
+	font-weight: bold;
+	font-size: xx-large;
+	width: 200px;
+	height: 300px;
+}
